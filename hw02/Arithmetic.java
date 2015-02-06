@@ -36,7 +36,7 @@ public class Arithmetic{
         
         double totalNoTax=totalGlassCost$+totalSockCost$+totalEnvelopeCost$; //total cost of all 3, no tax
         double totalTax=gTax$+sTax$+eTax$; // total tax of all 3
-        double totalWithTax=totalNoTax+totalTax;
+        double totalWithTax=totalNoTax+totalTax; //grand finale total
         
         
         
@@ -85,8 +85,8 @@ public class Arithmetic{
         double eWtTaxDouble= (double) eWtTaxInt;
         double eWtTaxFinal=eWtTaxDouble/100;
         
-        System.out.println("Number of socks bought= "+nSocks); //good
-        System.out.println("Number of glasses bought= "+nGlasses); //good
+        System.out.println("Number of socks bought= "+nSocks); //good, has 2 decimals
+        System.out.println("Number of glasses bought= "+nGlasses); //good 
         System.out.println("Number of envelopes bought= "+nEnvelopes);//good
         
         System.out.println("Cost per socks = $"+sockCost$);//good
@@ -97,17 +97,17 @@ public class Arithmetic{
         System.out.println("Cost of all the glasses = $"+totalGlassCost$);//good
         System.out.println("Cost of all the envelopes = $"+totalEnvelopeCost$); //automatically 2 decimals, all good
         
-        System.out.println("Sales tax all the socks = $"+sTaxFinal);
-        System.out.println("Sales tax all the glasses = $"+gTaxFinal);
-        System.out.println("Sales tax all the envelopes = $"+eTaxFinal);
+        System.out.println("Sales tax all the socks = $"+sTaxFinal); //good
+        System.out.println("Sales tax all the glasses = $"+gTaxFinal); //good, all of this is relatively self-explanatory
+        System.out.println("Sales tax all the envelopes = $"+eTaxFinal); //good
         
-        System.out.println("Total cost of socks including tax = $"+sWtTaxFinal);
-        System.out.println("Total cost of glasses including tax = $"+gWtTaxFinal);
-        System.out.println("Total cost of envelopes including tax = $"+eWtTaxFinal);
+        System.out.println("Total cost of socks including tax = $"+sWtTaxFinal); //good
+        System.out.println("Total cost of glasses including tax = $"+gWtTaxFinal); //good
+        System.out.println("Total cost of envelopes including tax = $"+eWtTaxFinal); //good, new variables are from the changes to 2 decimal places
         
         System.out.println("Total cost of all purchases no tax = $"+noTaxFinal);  //good
         System.out.println("Total tax on all purchases = $"+totalTaxFinal);  //good
-        System.out.println("Total cost of all purchases including tax = $"+totalWithTaxFinal); //good
+        System.out.println("Total cost of all purchases including tax = $"+totalWithTaxFinal); //good, el finale grande
         
         
     }
