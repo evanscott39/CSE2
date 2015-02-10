@@ -39,7 +39,7 @@ public class BigMac { //class
         
         System.out.println("The total cost of " +nBigMacs
          +" BigMacs, at $"+bigMac$ +" per bigMac, with a" +  
-         " sales tax of "+ (int)(taxRate*100) + "%, is" +
+         " sales tax of "+ (int)(taxRate*100) + "%, is " +
             "$"+dollars+"."+dimes+pennies);
 
          
