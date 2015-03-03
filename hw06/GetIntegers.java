@@ -11,24 +11,30 @@ public class GetIntegers {
         int count; //initialize the counter
         int sumInts = 0; //initialize sum counter
         int integerInput2 = 0;
-        
-        for (count=0; count <5; count=count){
-            if (myScanner.hasNextInt()) {
-                int integerInput = myScanner.nextInt();
+        boolean tryAgain = true;
+        System.out.println("Please enter 5 non negative integers: ");
+        while(tryAgain) {
+        for (count=0; count <5; count++){
+            String numberString = myScanner.next();
+            Scanner stringScanner = new Scanner(numberString);
+            if (stringScanner.hasNextInt()) {
+                int integerInput = stringScanner.nextInt();
                 
                 if (integerInput>0) {
                     
-                    count++;
+                    tryAgain = false;
                     sumInts = sumInts + integerInput;
                 } //end if statement
                 else {
                 System.out.println("Invalid input, enter again");
+                count--;
                 break;
                 }//end else statement
             
                 } //end if statement
             else {
             System.out.println("Invalid input, enter again");
+            count--;
             break;
             
             }//end else statement
@@ -37,8 +43,9 @@ public class GetIntegers {
         
         } //end for loop
         
-        System.out.println("Sum is " +sumInts);
+        }//end while
         
+        System.out.println("Sum is " +sumInts);
     }//end of main method
     
 } // end of class

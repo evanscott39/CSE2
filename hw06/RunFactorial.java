@@ -11,12 +11,13 @@ public class RunFactorial {
         int count=1; //initialize the counter
         
         int factorial  = 1;
-       // boolean tryAgain = true;
+        boolean tryAgain = true;
         System.out.println("Please enter an integer that is between 9 and 16: ");
-       // do {
-            
-            if (myScanner.hasNextInt()) {
-                int number = myScanner.nextInt();
+        do {
+            String numberString = myScanner.next();
+            Scanner stringScanner = new Scanner (numberString);
+            if (stringScanner.hasNextInt()) {
+                int number = stringScanner.nextInt();
                 if (number <9 || number >16) {
                     System.out.println("Invalid input, try again");
                    // continue;
@@ -25,7 +26,7 @@ public class RunFactorial {
                     while (count <= number) {
                         factorial = factorial * count;
                         count++;
-                        //tryAgain = false;
+                        tryAgain = false;
                         
                         
                     }//end while statement
@@ -36,13 +37,13 @@ public class RunFactorial {
                 
             } //end if statement
             else {
-                System.out.println("Invalid input, ");
+                System.out.println("Invalid input, try again");
                // int number = myScanner.nextInt();
                 
             }// end else statement
       
-        //}//end do
-       // while (tryAgain);
+        }//end do
+       while (tryAgain);
         
         
         
