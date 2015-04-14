@@ -140,7 +140,8 @@ public class RemoveElements{
     
     i = 0;
     a = 0;
-    while(a<length && b<listlength) {
+    //&& b<listlength
+    while(a<length ) {
         if(list[a] != target){
             targetedArray[b] = list[a];
             b++;
