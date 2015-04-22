@@ -138,6 +138,11 @@ public class Multiply{
  
  public static int[][] multiply(int[][] array1, int[][]array2){
      int[][] multipliedArray = new int[array1.length][array2[0].length];
+     if(array1.length != array2[0]){
+     	System.out.println("Arrays cannot be multiplied");
+     	return array1;
+     }//end if
+     else{
      for(int i = 0; i<array1.length; i++){
          for(int j = 0; j<array2[0].length; j++){
              for(int k = 0; k<array1[0].length; k++){
@@ -148,6 +153,7 @@ public class Multiply{
          
      } //end i for loop
      return multipliedArray;
+     } //end else
  } // end multiply method
  
  public static void printMatrix(int[][] array1){
