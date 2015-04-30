@@ -6,46 +6,88 @@ import java.util.Scanner;
 public class Cookies { 
     //main method
     public static void main(String[] args){
+        int people;
+        int cookies;
+        int cookiesPerPeople;
+        
       
-      Scanner myScanner;
-    myScanner=new Scanner(System.in);
+    Scanner scan =new Scanner(System.in);
     System.out.print("Enter the mumber of people: "); //user input # of people
-    int peopleInt = myScanner.nextInt ();
-    if (myScanner.peopleInt  = false) {
-        System.out.println("You did not enter an integer ");  //output if not an integer
-    } else if (peopleInt <= 0) {
-        System.out.println("You did not enter a positive number "); 
-        return; //leaves program
+    if(scan.hasNextInt()){
+        people = scan.nextInt();
+        if(people > 0){
+            
+         
+            
+            System.out.print("Enter the mumber of cookies you are planning to buy: "); //user input # of cookies
+            if(scan.hasNextInt()){
+                cookies = scan.nextInt ();
+                if(cookies > 0){
+            
+                    
+                    System.out.print("How many do you want each person to get?  "); //user input # of people
+                        if(scan.hasNextInt()){
+                            cookiesPerPeople = scan.nextInt ();
+                             if(cookiesPerPeople > 0){
+            
+                            
+                            
+    
+        } // end nested if
+        else{
+            System.out.println("Number must be greater than 0");
+            return;
+        } // end nested else
+    
+   
+    }//end if
+    else{
+        System.out.println("You did not enter an int");
+        return;
     }
-        
-//    System.out.print("Enter the mumber of cookies you are planning to buy: "); //user input # of people
-//    int cookiesInt = myScanner.nextInt();
-//    if (myScanner.hasNextInt ()) = false {
-//        System.out.println("You did not enter an integer ");  }//output if not an integer
-//        else (myScanner.hasNextInt ()) <= 0 {
-//        System.out.println("You did not enter a positive number "); }
-//        return; //leaves program 
-//        }
-        
-//    System.out.print("How many do you want each person to get? ");
-//    int cookiesPerPerson = myScanner.nextInt();
-//    if (myScanner.hasNextInt()) = false {
- //       System.out.println("You did not enter an integer "); }
-//        else (myScanner.hasNextInt ()) <= 0 {
-//        System.out.println("You did not enter a positive number "); }
-//        return;
-//        }
-
-//    int remainder = cookiesInt%cookiesPerPerson;
-//    int neededCookies = remainder*peopleInt;
     
- //   if remainder!=0 && cookiesInt < cookiesPerPerson*peopleInt {
- //       System.out.println("You will not have enough cookies. You need to buy at least " +neededCookies " more.");
-        
-  //  }
-     
-     
+        } // end nested if cookies
+        else{
+            System.out.println("Number must be greater than 0");
+            return;
+        } // end nested else cookies
     
+   
+    }//end if cookies
+    else{
+        System.out.println("You did not enter an int");
+        return;
+    } // end else cookies
+    
+        } // end nested if people
+        else{
+            System.out.println("Number must be greater than 0");
+            return;
+        } // end nested else people 
+    
+   
+    }//end if
+    else{
+        System.out.println("You did not enter an int");
+        return;
+    }
+     
+    if((cookiesPerPeople*people) <= cookies){
+        if(cookies%people == 0){
+            
+            System.out.println("You have enough cookies for each person and the amount will divide evenly");
+            
+        }
+        else{
+            System.out.println("You have enough, but they will not divide evenly");
+            
+        }
+    }
+    else{
+        System.out.print("You do not have enough cookies. You need to buy at least ");
+        System.out.print(cookiesPerPeople*people-cookies);
+        System.out.println(" more");
+    }
     
     
     

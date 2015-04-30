@@ -138,7 +138,7 @@ public class Multiply{
  
  public static int[][] multiply(int[][] array1, int[][]array2){
      int[][] multipliedArray = new int[array1.length][array2[0].length];
-     if(array1.length != array2[0]){
+     if(array1.length != array2[0].length){
      	System.out.println("Arrays cannot be multiplied");
      	return array1;
      }//end if
