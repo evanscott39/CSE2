@@ -88,6 +88,9 @@ public class FourDwin{
       
   } // end statArray method
   
+  //Have not done these methods, so the program will not print out or compile.
+  //just be aware. thanks.
+  
   public static int[][][][] sort4DArray(int[][][][] array){
       
   }//end sort4darray method
